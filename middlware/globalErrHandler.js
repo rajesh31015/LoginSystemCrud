@@ -1,4 +1,5 @@
 const globalErrHandler = (err, req, res, next) => {
+  console.log("jhjhhhhhhhhhhhhhhhhh")
   //status
   //message
   //stack
