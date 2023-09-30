@@ -43,7 +43,7 @@ const verifyToken = async (request)=>{
                 token = tmp[3];
             }
             else {
-                token = request.cookies.authToken;
+                token = request.cookies?.authToken;
             }
         }
     }
@@ -57,7 +57,7 @@ const verifyToken = async (request)=>{
         try{
             const tmp = jwt.verify(token,secretId);
             const requestCommingFrom = tmp.iss;
-
+            console.log(tmp)
             if(issService.indexOf(requestCommingFrom) != -1)
             {
                 return {

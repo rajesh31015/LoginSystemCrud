@@ -45,8 +45,7 @@ const signin = AysncHandler(async (req,res)=>{
     try{
         const { email, password } = req.body;
         // Find the user in the database
-        const userExist =  User.findOne({email:email});
-        console.log(userExist,"kkk")
+        const userExist =  await User.findOne({email:email});
         if(!userExist){
             return res.status(401).json({
                 message: "Email and Password is not valid!",
