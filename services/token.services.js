@@ -30,34 +30,34 @@ const createCustomToken = async (data,expiresIn)=>{
 
 const verifyToken = async (request)=>{
     let token = "";
-    if(request.method == "GET")
-    {
-        if(request.headers["x-auth-token"])
-        {
+    // if(request.method == "GET")
+    // {
+    //     if(request.headers["x-auth-token"])
+    //     {
             token = request.headers["x-auth-token"];
-        }
-        else{
-            if(request.originalUrl.indexOf("/clients/invitation") != -1)
-            {
-                let tmp = request.originalUrl.split("/");
-                token = tmp[3];
-            }
-            else {
-                token = request.cookies?.authToken;
-            }
-        }
-    }
-    else
-    {
-        token = request.body.token;
-    }
+    //     }
+    //     else{
+    //         if(request.originalUrl.indexOf("/clients/invitation") != -1)
+    //         {
+    //             let tmp = request.originalUrl.split("/");
+    //             token = tmp[3];
+    //         }
+    //         else {
+    //             token = request.cookies?.authToken;
+    //         }
+    //     }
+    // }
+    // else
+    // {
+    //     token = request.body.token;
+    // }
 
     if(token)
     {
         try{
             const tmp = jwt.verify(token,secretId);
             const requestCommingFrom = tmp.iss;
-            console.log(tmp)
+            // console.log(tmp)
             if(issService.indexOf(requestCommingFrom) != -1)
             {
                 return {
