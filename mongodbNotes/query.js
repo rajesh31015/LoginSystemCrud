@@ -41,6 +41,17 @@ const result = await Model.aggregate([
     { $match: { key: value } },
     { $group: { _id: "$category", total: { $sum: 1 } } }
 ]);
+// Aggregation Query:
+const results = await Product.aggregate([
+  { $match: { category: "Electronics" } },
+  {
+    $group: {
+      _id: "$category",  // Group by category
+      totalProducts: { $sum: 1 }, // Count the number of documents in each group
+      avgPrice: { $avg: "$price" } // Calculate the average price in each group
+    }
+  }
+]);
 
 
 // Counting Documents:
