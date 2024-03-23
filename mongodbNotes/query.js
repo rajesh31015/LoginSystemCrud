@@ -52,6 +52,70 @@ const results = await Product.aggregate([
     }
   }
 ]);
+// releation between post and user table 
+db.posts.aggregate([
+  {
+    $lookup: {
+      from: "users",
+      localField: "userId",
+      foreignField: "id",
+      as: "userInfo"
+    }
+  },
+  {
+    $project: {
+      id: 1,
+      title: 1,
+      userName: { $arrayElemAt: ["$userInfo.name", 0] }
+    }
+  }
+]);
+
+db.posts.aggregate([
+  {
+    $lookup: {
+      from: "users",
+      localField: "userId",
+      foreignField: "id",
+      as: "userInfo"
+    }
+  },
+  {
+    $project: {
+      id: 1,
+      title: 1,
+      userInfo: 1,
+      userName: { $arrayElemAt: ["$userInfo.name", 0] },
+      username: { $arrayElemAt: ["$userInfo.username", 0] }
+    }
+  },
+  {
+    $limit: 1
+  }
+]);
+// use of wind with example
+
+// Let's say you have a collection of documents like this:
+/*
+{
+  "_id": 1,
+  "name": "Alice",
+  "hobbies": ["Reading", "Gardening", "Cooking"]
+}
+*/
+// If you want to find all users and their individual hobbies, you can use $unwind on the hobbies array:
+db.users.aggregate([
+  { $unwind: "$hobbies" }
+]);
+// After using $unwind on the hobbies array, you will get a result like this:
+/*
+{ "_id": 1, "name": "Alice", "hobbies": "Reading" }
+{ "_id": 1, "name": "Alice", "hobbies": "Gardening" }
+{ "_id": 1, "name": "Alice", "hobbies": "Cooking" }
+*/
+
+
+
 
 
 // Counting Documents:
