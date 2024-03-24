@@ -15,3 +15,7 @@
 14. pre renderning and no pre rendering
 15. incremental static generation
 16. talwind with headless ui (resources)
+17. react spring
+18. declare default components path
+19. redux
+20. yup validation
