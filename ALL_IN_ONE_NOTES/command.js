@@ -12,3 +12,7 @@
 // npm i redux react-redux redux-thunk redux-logger
 // npm i --save-dev video.js
 // npm i @videojs/themes
+// npm i mongodb
+// npm i --save mongoose
+// npm i aws-sdk
+// npm i next-connect

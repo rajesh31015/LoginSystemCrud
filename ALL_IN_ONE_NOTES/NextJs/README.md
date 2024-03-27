@@ -19,3 +19,8 @@
 18. declare default components path
 19. redux
 20. yup validation
+21. env.local
+22. api routes / dynamic routes / nested dynamic routes
+23. middlware
+24. connect to database
+25. next connect
