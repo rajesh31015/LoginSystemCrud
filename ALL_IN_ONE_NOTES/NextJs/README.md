@@ -24,3 +24,9 @@
 23. middlware
 24. connect to database
 25. next connect
+26. next auth /google / facebook / github / custom
+27. [css](https://cssgradient.io/gradient-backgrounds/)
+28. razorpay and other payment method / instamojo / paypal / 
+29. middlware
+30. ip adress / mac address
+31. varacle / Go Daddy

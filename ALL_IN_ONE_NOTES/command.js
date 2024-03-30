@@ -16,3 +16,6 @@
 // npm i --save mongoose
 // npm i aws-sdk
 // npm i next-connect
+// npm i next-auth -> google, facebook and custom
+// npm i naniid / used for unique key generate
+// npm i react-razorpay
