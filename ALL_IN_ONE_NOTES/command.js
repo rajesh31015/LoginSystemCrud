@@ -36,3 +36,6 @@
 // python manage.py makemigrartions
 // python manage.py migrate
 // python manage.py create superuser
+// pipenv install django-cors-headers
+// pipenv install psycopg2-binary
+// pipenv install djangorestframework-simplejwt
