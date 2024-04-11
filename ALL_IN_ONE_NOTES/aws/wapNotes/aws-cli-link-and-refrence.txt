@@ -1,0 +1,9 @@
+Aws cli app download link
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+
+1. aws --version
+2. aws configure
+
+aws path
+C:\Program Files\Amazon\AWSCLIV2\
+

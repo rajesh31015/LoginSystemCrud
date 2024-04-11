@@ -1,0 +1,10 @@
+# python s3cmd --configure
+
+# python s3cmd ls -> list bucket name
+# python s3cmd ls bucketname -> list file within the bucket
+
+#update cors cmd
+python s3cmd setcors cors.xml s3://bucket
+
+#Check cors cmd
+python s3cmd info s3://bucket

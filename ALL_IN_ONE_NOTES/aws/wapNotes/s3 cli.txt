@@ -1,0 +1,28 @@
+Aws s3 cli
+
+Uploading file
+aws s3 cp file.jpg s3://bucket/file.jpg
+
+Uploading nested files folders
+aws s3 cp folderName s3://bucket --recursive
+
+Downloading file
+aws s3 cp s3://bucket/test.jpg e:/test.jpg --recursive
+
+Downloading nested files and folders
+aws s3 cp s3://bucket e:/folderName --recursive
+
+Deleting
+aws s3 rm s3://bucket/test.jpg
+
+Deleting nested
+aws s3 rm s3://bucket --recursive
+
+Listing all buckets
+aws s3 ls
+
+Listing all files and folders
+aws s3 ls s3://bucket --recursive
+
+Generate url for private files (pre-signed url)
+aws s3 presign s3://bucket/file.png --expires-in 60

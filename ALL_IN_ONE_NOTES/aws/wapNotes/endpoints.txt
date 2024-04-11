@@ -1,0 +1,2 @@
+ap-south-1.linodeobjects.com
+sgp1.digitaloceanspaces.com
