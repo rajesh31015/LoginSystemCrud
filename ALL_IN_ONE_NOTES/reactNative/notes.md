@@ -1,0 +1,1 @@
+1. short hand properties of css not support in react native.
